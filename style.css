@@ -1,0 +1,78 @@
+::selection {
+  background: #243117c1;
+}
+
+:root,
+body,
+html {
+  --background-1: #151208d9;
+  --background-2: #18211469;
+  --background-2-light: #292d1e71;
+  --foreground-1: #fcfcf7;
+  --foreground-2: #fcfcd9;
+
+  background: var(--background-1);
+  /* background: transparent; */
+
+  color: var(--foreground-1);
+  font-family: "Kalnia", serif;
+
+  margin: 0;
+  width: 100vw;
+  min-height: 100vh;
+
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.title {
+  color: var(--foreground-2);
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+.entry {
+  border: 1px solid #333;
+  width: 300px;
+  height: 150px;
+  margin: 20px;
+  padding: 10px;
+
+  background-color: var(--background-2);
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.entry:hover {
+  background-color: var(--background-2-light);
+}
+
+.entry .stuff {
+  font-family: "Source Serif 4", serif;
+  margin-top: 5px;
+  text-overflow: ellipsis;
+}
+
+.entry h2 {
+  color: var(--foreground-2);
+  margin: 0;
+  border-bottom: 1px solid #555;
+}
+
+#background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  filter: blur(3px);
+}
+
+#timeline {
+}
