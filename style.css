@@ -1,13 +1,13 @@
-::selection {
-  background: #243117c1;
-}
-
 :root,
 body,
 html {
   --background-1: #151208d9;
-  --background-2: #18211469;
+  --background-2: #18211480;
   --background-2-light: #292d1e71;
+
+  --background-3: #2b261780;
+  --background-3-light: #423b1b5f;
+
   --foreground-1: #fcfcf7;
   --foreground-2: #fcfcd9;
 
@@ -18,12 +18,25 @@ html {
   font-family: "Kalnia", serif;
 
   margin: 0;
-  width: 100vw;
+  /* width: 100vw; */
   min-height: 100vh;
+
+  /* overflow-x: hidden; */
 
   font-smooth: always;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+#background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  filter: blur(2px);
 }
 
 .title {
@@ -34,21 +47,23 @@ html {
 }
 
 .entry {
+  backdrop-filter: blur(5px);
   border: 1px solid #333;
-  width: 300px;
-  height: 150px;
-  margin: 20px;
   padding: 10px;
+  margin: 10px 0;
 
   background-color: var(--background-2);
   border-radius: 8px;
   overflow: hidden;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition:
+    background 0.3s ease,
+    border 0.3s ease;
 }
 
 .entry:hover {
   background-color: var(--background-2-light);
+  border: 1px solid #888;
 }
 
 .entry .stuff {
@@ -63,16 +78,69 @@ html {
   border-bottom: 1px solid #555;
 }
 
-#background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  z-index: -1;
-  filter: blur(3px);
+.quote {
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid #333;
+  padding: 10px;
+  margin: 10px auto;
+
+  background-color: var(--background-3);
+  border-radius: 8px;
+  width: fit-content;
+  transition:
+    background 0.3s ease,
+    border 0.3s ease;
+}
+
+#right .quote {
+  margin-left: 30px;
+}
+
+#left .quote {
+  margin-right: 30px;
+}
+
+.quote:hover {
+  border: 1px solid #888;
+  background: var(--background-3-light);
+}
+
+#content {
+  position: relative;
+  display: flex;
+}
+
+#left {
+  width: calc(50% - 6px);
+  padding: 20px;
+}
+
+#right {
+  width: calc(50% - 6px);
+  padding: 20px;
 }
 
 #timeline {
+  width: 10px;
+  border-radius: 999px;
+  border: 2px solid #67aa8a88;
+}
+
+#pages > div {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 2px;
+  width: 10px;
+  background: #bd9658e2;
+  border-radius: 999px;
+}
+
+#p5 {
+  top: 10px;
+}
+
+#p9 {
+  top: 20px;
 }
