@@ -16,6 +16,7 @@ html {
   font-size: 1.07em;
 
   margin: 0;
+  padding-bottom: 10px;
   min-height: 100vh;
   overflow-x: hidden;
 
@@ -55,8 +56,14 @@ html {
   text-align: center;
 }
 
+.title span {
+  text-shadow: 5px 5px 3px #000b;
+  font-style: italic;
+}
+
 .entry {
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border: 1px solid #333;
   padding: 10px;
   margin: 10px 10px;
@@ -82,8 +89,9 @@ html {
   color: var(--foreground-2);
   margin: 0;
   border-bottom: 1px solid #555;
-  padding-left: 2.5px;
   margin-bottom: 10px;
+  text-align: center;
+  font-style: italic;
 }
 
 .entry a {
@@ -101,8 +109,8 @@ html {
 
 .quote {
   font-weight: bold;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border: 1px solid #4d664d;
   padding: 15px;
   margin: 20px 0;
@@ -133,6 +141,7 @@ html {
 #content {
   position: relative;
   display: flex;
+  margin-bottom: 20px;
 }
 
 #left {
@@ -147,7 +156,7 @@ html {
 
 #timeline {
   width: 10px;
-  height: 2200px;
+  height: auto;
   border-radius: 999px;
   border: 2px solid #67aa8a88;
 }
@@ -160,6 +169,12 @@ html {
   width: 10px;
   background: #bd9658e2;
   border-radius: 999px;
+}
+
+#source-link {
+  color: white;
+  text-align: center;
+  display: block;
 }
 
 #p5 {
