@@ -2,7 +2,7 @@
 body,
 html {
   --background-1: #151208d9;
-  --background-2: #18211480;
+  --background-2: #1821149a;
   --background-2-light: #292d1e71;
 
   --background-3: #2b261780;
@@ -11,21 +11,19 @@ html {
   --foreground-1: #fcfcf7;
   --foreground-2: #fcfcd9;
 
-  background: var(--background-1);
-  /* background: transparent; */
-
   color: var(--foreground-1);
   font-family: "Kalnia", serif;
 
   margin: 0;
-  /* width: 100vw; */
   min-height: 100vh;
-
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
 
   font-smooth: always;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  scroll-behavior: smooth;
+  scroll-padding-top: 50%;
 }
 
 #background {
@@ -34,9 +32,19 @@ html {
   left: 0;
   width: 100vw;
   height: 100vh;
-  object-fit: cover;
+  background: var(--background-1);
   z-index: -1;
-  filter: blur(2px);
+}
+
+#background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -2;
+  /* filter: blur(2px); */
 }
 
 .title {
@@ -55,7 +63,7 @@ html {
   background-color: var(--background-2);
   border-radius: 8px;
   overflow: hidden;
-  cursor: pointer;
+  /* cursor: pointer; */
   transition:
     background 0.3s ease,
     border 0.3s ease;
@@ -63,22 +71,40 @@ html {
 
 .entry:hover {
   background-color: var(--background-2-light);
-  border: 1px solid #888;
+  border: 1px solid #4d4d4d;
 }
 
-.entry .stuff {
+.entry p {
   font-family: "Source Serif 4", serif;
-  margin-top: 5px;
+  margin: 0;
+  margin-top: 2.5px;
   text-overflow: ellipsis;
+  text-indent: 40px;
 }
 
 .entry h2 {
   color: var(--foreground-2);
   margin: 0;
   border-bottom: 1px solid #555;
+  padding-left: 2.5px;
+  margin-bottom: 10px;
+}
+
+.entry a {
+  all: unset;
+  color: #e6f5e8;
+  text-shadow: 0 0 5px #ffffcc4d;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: text-shadow 0.2s ease;
+}
+
+.entry a:hover {
+  text-shadow: 0 0 5px #ffffcce6;
 }
 
 .quote {
+  font-weight: bold;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid #333;
@@ -102,7 +128,7 @@ html {
 }
 
 .quote:hover {
-  border: 1px solid #888;
+  border: 1px solid #4d4d4d;
   background: var(--background-3-light);
 }
 
@@ -123,6 +149,7 @@ html {
 
 #timeline {
   width: 10px;
+  height: 2200px;
   border-radius: 999px;
   border: 2px solid #67aa8a88;
 }
@@ -141,6 +168,33 @@ html {
   top: 10px;
 }
 
+#p6 {
+  top: 14px;
+}
+
+#p8 {
+  top: 18px;
+}
+
 #p9 {
   top: 20px;
+}
+
+#p111 {
+  top: 1500px;
+}
+
+.quote:target {
+  animation-name: ref-animation;
+  animation-duration: 1.5s;
+}
+@keyframes ref-animation {
+  from {
+    background-color: #ffffcc55;
+    text-shadow: 0 0 10px #fff;
+  }
+  to {
+    background-color: transparent;
+    text-shadow: none;
+  }
 }
