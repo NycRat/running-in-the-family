@@ -2,6 +2,7 @@ const rightOptions = {
   color: "var(--foreground-2)",
   sourcePosition: "middleLeft",
   destinationPosition: "middleRight",
+  curvature: 0,
 };
 
 const leftOptions = {
