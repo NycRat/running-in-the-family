@@ -25,7 +25,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
 
   scroll-behavior: smooth;
-  scroll-padding-top: 50%;
+  scroll-padding-top: 50px;
 }
 
 #background {
@@ -54,10 +54,10 @@ html {
   margin: 0;
   padding: 20px;
   text-align: center;
+  text-shadow: 5px 5px 3px #000b;
 }
 
 .title span {
-  text-shadow: 5px 5px 3px #000b;
   font-style: italic;
 }
 
@@ -105,6 +105,24 @@ html {
 
 .entry span:hover {
   text-shadow: 0 0 10px #ffffccb3;
+}
+
+.entry span p {
+  line-height: unset;
+  text-indent: 0;
+  margin: 10px inherit;
+  padding-left: 40px;
+}
+
+.entry a {
+  all: unset;
+  color: #dce2f5;
+  text-decoration: underline;
+  transition: text-shadow 0.2s ease;
+  cursor: pointer;
+}
+.entry a:hover {
+  text-shadow: 0 0 10px #f3f2e69a;
 }
 
 /* .quote { */
@@ -227,7 +245,7 @@ iframe {
 
 .reference img {
   border-radius: 8px;
-  width: 85%;
+  width: 90%;
   margin: auto;
   display: block;
 }
@@ -236,4 +254,12 @@ iframe {
   text-align: right;
   margin: 0;
   font-size: 16px;
+}
+
+.entry:first-of-type {
+  margin-top: 0;
+}
+
+.entry:last-of-type {
+  margin-bottom: 0;
 }
