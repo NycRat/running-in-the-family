@@ -1,14 +1,17 @@
+const curvature = 0;
+
 const rightOptions = {
   color: "var(--foreground-2)",
   sourcePosition: "middleLeft",
   destinationPosition: "middleRight",
-  curvature: 0,
+  curvature,
 };
 
 const leftOptions = {
   color: "var(--foreground-2)",
   sourcePosition: "middleRight",
   destinationPosition: "middleLeft",
+  curvature,
 };
 
 const arrows = [
@@ -18,7 +21,7 @@ const arrows = [
   arrowLine("#quote3", "#p8", rightOptions),
   arrowLine("#quote4", "#p9", rightOptions),
   arrowLine("#quote5", "#p9", rightOptions),
-  arrowLine("#quote111", "#p111", leftOptions),
+  arrowLine("#quotel5", "#p111", leftOptions),
 ];
 
 window.addEventListener("resize", () => {
