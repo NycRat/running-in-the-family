@@ -66,7 +66,7 @@ html {
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid #333;
   padding: 10px;
-  margin: 10px 10px;
+  margin: 50px 10px;
 
   background-color: var(--background-2);
   border-radius: 8px;
@@ -95,44 +95,43 @@ html {
   font-style: italic;
 }
 
-.entry a {
+.entry span {
   all: unset;
   color: #e3f7d8;
   /* text-shadow: 0 0 10px #ffffcc4d; */
-  cursor: pointer;
   text-decoration: underline;
   transition: text-shadow 0.2s ease;
 }
 
-.entry a:hover {
+.entry span:hover {
   text-shadow: 0 0 10px #ffffccb3;
 }
 
-.quote {
-  font-weight: bold;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid #4d664d;
-  padding: 10px 15px;
-  margin: 10px 0;
-
-  background-color: var(--background-3);
-  border-radius: 8px;
-  width: fit-content;
-  transition:
-    background 0.3s ease,
-    border 0.3s ease;
-}
-
-#right .quote {
-  margin-left: 40px;
-  margin-right: 20px;
-}
-
-#left .quote {
-  margin-right: 40px;
-  margin-left: 20px;
-}
+/* .quote { */
+/*   font-weight: bold; */
+/*   backdrop-filter: blur(10px); */
+/*   -webkit-backdrop-filter: blur(10px); */
+/*   border: 1px solid #4d664d; */
+/*   padding: 10px 15px; */
+/*   margin: 100px 0; */
+/**/
+/*   background-color: var(--background-3); */
+/*   border-radius: 8px; */
+/*   width: fit-content; */
+/*   transition: */
+/*     background 0.3s ease, */
+/*     border 0.3s ease; */
+/* } */
+/**/
+/* #right .quote { */
+/*   margin-left: 40px; */
+/*   margin-right: 20px; */
+/* } */
+/**/
+/* #left .quote { */
+/*   margin-right: 40px; */
+/*   margin-left: 20px; */
+/* } */
 
 /* .quote:hover { */
 /*   border: 1px solid #4d4d4d; */
