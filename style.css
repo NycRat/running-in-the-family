@@ -2,7 +2,7 @@
 body,
 html {
   --background-1: #1b230892;
-  --background-2: #242114a7;
+  --background-2: #1d1b13c0;
   --background-2-light: #292d1e71;
 
   --background-3: #2b261780;
@@ -99,7 +99,7 @@ html {
   all: unset;
   color: #e3f7d8;
   /* text-shadow: 0 0 10px #ffffcc4d; */
-  text-decoration: underline;
+  /* text-decoration: underline; */
   transition: text-shadow 0.2s ease;
 }
 
@@ -177,6 +177,8 @@ html {
   height: auto;
   border-radius: 999px;
   border: 2px solid #67aa8a88;
+  margin: 35px 0;
+  background: #67aa8a88;
 }
 
 #pages > div {
@@ -245,6 +247,7 @@ iframe {
 
 .reference img {
   border-radius: 8px;
+  /* width: 90%; */
   width: 90%;
   margin: auto;
   display: block;
@@ -262,4 +265,10 @@ iframe {
 
 .entry:last-of-type {
   margin-bottom: 0;
+}
+
+@media only screen and (max-width: 850px) {
+  div {
+    background: white;
+  }
 }
